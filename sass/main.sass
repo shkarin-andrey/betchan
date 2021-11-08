@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap')
+@import 'variables'
+
+*, *:before, *:affter
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+p, h1, h2, h3, h4, h5, h6
+    margin: 0
+body
+    background-color: $black
+    font-size: 18px
+    font-weight: 400
+    color: $text
+    font-family: 'Roboto', sans-serif
+    padding: 0
+    margin: 0
+.container
+    width: 1110px
+    margin: 0 auto
+    box-sizing: border-box
+.d-flex
+    display: flex
+.ai-center
+    align-items: center
+.jc-sb
+    justify-content: space-between
+.title
+    font-size: 50px
+    font-weight: 500
+    color: $text
+    &_tt-u
+        text-transform: uppercase
+.text
+    color: $text-grey
+.btn
+    text-transform: uppercase
+    font-weight: 700
+    height: 60px
+    width: 200px
+    border-radius: 50px
+    border: 1px solid $btn
+    outline: none
+    background-color: transparent
+    color: #fff
+    cursor: pointer
+    transition: all .3s
+    &:hover
+        background-color: $darken
+        border-color: $darken
+        box-shadow: 0 0 15px $btn
+    &_bg-color
+        background-color: $btn
+.header
+    display: flex
+    align-items: center
+    height: 100px
+    &__wrapper
+        display: none
+    .hamburger
+        display: none
+    .logo
+        height: 50px
+        width: 50px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .bonuses
+        font-weight: 700
+        color: $bonuses
+        text-transform: uppercase
+        text-decoration: none
+        span
+            border-bottom: 1px dotted $text
+    &__right
+        width: 280px
+        margin-right: 120px
+        .btn
+            width: 100px
+            height: 50px
+        .flag
+            width: 25px
+            height: 25px
+            border-radius: 100%
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+.intro
+    position: relative
+    width: 100%
+    min-height: 490px
+    background: url('../img/Slider.jpg') center (center / cover) no-repeat
+    padding-top: 100px
+    &__bg
+        position: absolute
+        width: calc(50% + 50px)
+        height: 100%
+        right: 0
+        top: 0
+        background-color: $black-2
+        opacity: .8
+    &__left
+        min-width: 470px
+        z-index: 1
+        padding: 0 20px
+    &__right
+        z-index: 1
+        padding: 0 20px 0 40px
+        .text
+            line-height: 27px
+            color: $text-grey
+    &_title
+        font-size: 50px
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 50px
+        text-shadow: 3px 3px 10px rgba(0,0,0,.4)
+    &__pagin
+        display: flex
+        align-items: center
+        margin-top: 45px
+        font-size: 19px
+        font-weight: 300
+        a
+            color: $text
+            text-decoration: none
+            transition: all .3s
+            &:hover
+                color: $btn
+        span
+            display: block
+            width: 5px
+            height: 2px
+            margin: 0 10px
+            background-color: $btn
+.bonus
+    padding-top: 55px
+    padding-bottom: 65px
+    &:nth-child(2n+1)
+        background-color: $black-2
+
+    &__left
+        width: 500px
+    &__right
+        position: relative
+        width: calc(100% - 500px)
+        img
+            position: absolute
+            display: block
+            margin: 0 auto
+            right: 50%
+            transform: translateX(50%)
+            bottom: -65px
+            height: 240px
+            object-fit: cover
+    &__text
+        margin-top: 40px
+        margin-bottom: 40px
+        color: $text-grey
+.faq
+    padding: 50px 0
+    &__wrapper
+        margin-top: 35px
+    &__title
+        font-size: 20px
+        text-transform: uppercase
+        transition: all .3s
+        font-weight: 700
+    &__arrow
+        color: #666666
+        font-weight: 300
+    &__tab
+        border: 1px solid #404040
+        cursor: pointer
+        padding: 10px 20px
+        &:hover .faq__title
+            color: $bonuses
+        &:hover .faq__arrow
+            color: $bonuses
+        .faq__tab_top
+            display: flex
+            justify-content: space-between
+        .text
+            display: none
+            padding-top: 10px
+.partners
+    background-color: $black-2
+    padding: 50px 0
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        gap: 25px
+        img
+            filter: grayscale(1)
+            transition: all .3s
+            &:hover
+                filter: grayscale(0)
+.footer
+    padding-bottom: 35px
+    background-color: $black-2
+    &__wrapper
+        display: flex
+        gap: 60px
+    .logo
+        display: flex
+        align-items: center
+        color: $text
+        text-decoration: none
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 40px
+        letter-spacing: 0.1rem
+        margin-bottom: 35px
+        img
+            padding-right: 10px
+
+.up
+    position: fixed
+    right: 20px
+    bottom: 40px
+    display: none
+    justify-content: center
+    align-items: center
+    width: 50px
+    height: 50px
+    background-color: rgba(255,255,255,.8)
+    border-radius: 100%
+    z-index: 1
+
+@import 'media'

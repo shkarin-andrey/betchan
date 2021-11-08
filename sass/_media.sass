@@ -1,0 +1,141 @@
+@media (max-width: 1200px)
+    .container
+        max-width: 960px
+
+@media (max-width: 992px)
+    .container
+        max-width: 720px
+    .intro
+        background: url(../img/Slider.jpg) top no-repeat
+        .container
+            flex-wrap: wrap
+        &__bg
+            width: 100%
+        &__pagin
+            display: none
+        .btn
+            display: block
+            margin: 0 auto
+        &__right
+            margin-top: 140px
+    .bonus
+        padding-bottom: 0
+        .container
+            flex-wrap: wrap
+            flex-direction: column
+        &__right
+            padding-top: 40px
+            width: 100%
+            img
+                position: unset
+                transform: unset
+@media (max-width: 768px)
+    .container
+        max-width: 540px
+    .header
+        .bonuses
+            display: none
+        &__right
+            display: none
+        &__wrapper
+            position: fixed
+            top: 0
+            left: 0
+            // display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 40px
+            background-color: rgba(0,0,0,.9)
+            width: 100%
+            height: 100vh
+            z-index: 2
+            .close
+                position: absolute
+                display: flex
+                justify-content: center
+                align-items: center
+                top: 20px
+                right: 10px
+                height: 40px
+                width: 40px
+                cursor: pointer
+                span
+                    position: absolute
+                    width: 100%
+                    height: 4px
+                    display: block
+                    background-color: $text
+                    border-radius: 10px
+                    &:nth-child(1)
+                        transform: rotate(45deg)
+                    &:nth-child(2)
+                        transform: rotate(-45deg)
+            .bonuses
+                display: block
+                z-index: 2
+                text-align: center
+            .header__right
+                display: block
+                z-index: 2
+                width: 100%
+                margin: 0 auto
+                text-align: center
+        .hamburger
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            height: 35px
+            width: 40px
+            cursor: pointer
+            transition: all .3s
+            span
+                display: block
+                width: 40px
+                height: 6px
+                background-color: $text
+                border-radius: 10px
+                transition: all .3s
+            &-active
+                justify-content: center
+                span
+                    position: absolute
+                    &:nth-child(1)
+                        transform: rotate(45deg)
+                    &:nth-child(2)
+                        opacity: 0
+                    &:nth-child(3)
+                        transform: rotate(-45deg)
+    .intro
+        &__left
+            width: 100%
+            min-width: unset
+        &__right
+            padding: 0
+    .bonus
+        &__left
+            width: 100%
+    .footer
+        &__wrapper
+            flex-direction: column
+            gap: 30px
+
+@media (max-width: 577px)
+    .container
+        width: 100%
+        padding: 0 10px
+    .title
+        font-size: 42px
+    .intro
+        &__left
+            padding: 0
+        .title
+            font-size: 38px
+    .bonus__right img
+        width: 100%
+        height: unset
+    .footer .logo img
+        padding: 0
+        max-width: 330px
+        width: 100%
